@@ -2,15 +2,18 @@ $(document).ready(function () {
   $("#shoppingList").submit(function (event) {
     event.preventDefault();
 
-let groceryList = ["item1", "item2", "item3", "item4", "item5", "item6"];
-groceryList.sort();
-console.log(groceryList);
-
-
-
+var groceryList = ["item1", "item2", "item3", "item4", "item5", "item6"];
+var capsList = [];
 
 groceryList.forEach(function(input) {
-  let groceries = $("input#" + input).val();
+  var groceries = capsList.push(groceries);
+});
+
+var capsList = capsList.sort();
+
+
+capsList.forEach(function(input) {
+  var groceries = $("input#" + input).val();
   $("." + input).text(groceries);
   
 
